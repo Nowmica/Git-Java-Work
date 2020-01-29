@@ -6,7 +6,7 @@
 		<div class="panel-heading">Home Page</div>
 		<div class="panel-body">
 			Welcome ${name}!! <a href="/list-todos">Click here</a> to manage your
-			todo's.
+			tasks.
 		</div>
 	</div>
 </div>

@@ -61,7 +61,6 @@ public class TodoController {
 	@RequestMapping(value = "/delete-todo", method = RequestMethod.GET)
 	public String deleteTodo(@RequestParam long id) {
 		todoService.deleteTodo(id);
-		// service.deleteTodo(id);
 		return "redirect:/list-todos";
 	}
 
@@ -71,6 +70,8 @@ public class TodoController {
 		model.put("todo", todo);
 		return "todo";
 	}
+	
+	
 
 	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
 	public String updateTodo(ModelMap model, @Valid Todo todo, BindingResult result) {

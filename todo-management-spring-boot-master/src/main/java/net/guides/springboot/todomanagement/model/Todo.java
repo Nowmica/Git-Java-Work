@@ -19,24 +19,56 @@ public class Todo {
 
 	private String userName;
 
+	private String title;
+	
 	@Size(min = 10, message = "Enter at least 10 Characters...")
 	private String description;
-
 	private Date targetDate;
+	private String assignedTo; 
+	private String status; 
 	
 	public Todo() {
 		super();
 	}
 
-	public Todo(String user, String desc, Date targetDate, boolean isDone) {
+	public Todo(String user, String title,String desc, Date targetDate,String assignedTo,String status) {
 		super();
 		this.userName = user;
+		this.title=title;
 		this.description = desc;
 		this.targetDate = targetDate;
+		this.status = status;
+		this.assignedTo = assignedTo;
+		
+	}
+
+
+	public String getAssignedTo() {
+		return assignedTo;
+	}
+
+	public void setAssignedTo(String assignedTo) {
+		this.assignedTo = assignedTo;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public long getId() {
 		return id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
 	public void setId(long id) {

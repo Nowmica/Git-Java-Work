@@ -15,8 +15,7 @@ public interface ITodoService {
 
 	void updateTodo(Todo todo);
 
-	void addTodo(String name, String desc, Date targetDate, boolean isDone);
-
+	void addTodo(String title,String name, String desc, Date targetDate, String assignedTo,String status);
 	void deleteTodo(long id);
 	
 	void saveTodo(Todo todo);

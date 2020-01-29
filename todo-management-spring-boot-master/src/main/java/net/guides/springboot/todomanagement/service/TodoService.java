@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import net.guides.springboot.todomanagement.model.Todo;
 import net.guides.springboot.todomanagement.repository.TodoRepository;
 
+
+
 @Service
 public class TodoService implements ITodoService {
 
@@ -32,8 +34,9 @@ public class TodoService implements ITodoService {
 	}
 
 	@Override
-	public void addTodo(String name, String desc, Date targetDate, boolean isDone) {
-		todoRepository.save(new Todo(name, desc, targetDate, isDone));
+	public void addTodo(String title, String name, String desc, Date targetDate, String assignedTo,String status) 
+	{
+		todoRepository.save(new Todo(title,name,desc,targetDate,assignedTo,status));
 	}
 
 	@Override
